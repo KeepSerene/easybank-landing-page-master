@@ -141,7 +141,6 @@ body {
     var(--dark-blue),
     var(--light-grayish-blue)
   );
-  background-color: red;
 
   position: absolute;
   z-index: 1;
@@ -366,7 +365,7 @@ body.no-scroll {
   }
 }
 
-/* The following is necessary for the hamburger menu overlay */
+/* The following is necessary for the hamburger menu overlay on mobiles */
 @media (width < 50em) {
   .hero__image.open {
     z-index: 2;
@@ -539,7 +538,7 @@ body.no-scroll {
 
   .articles h2 {
     text-align: center;
-    margin-bottom: 1.5625rem;
+    margin-bottom: 1.75rem;
   }
 
   .article__text {
