@@ -1,0 +1,115 @@
+/* Spacing */
+.wrapper {
+  max-width: 69.375rem;
+  margin-inline: auto;
+}
+
+.nav-p-all {
+  padding-inline: 1.5rem;
+  padding-block: 1.125rem;
+}
+
+.main-p-all {
+  padding-inline: 1.5rem;
+  padding-block: 4.375rem;
+}
+
+@media (width >= 64rem) {
+  .main-p-all {
+    padding-block: 6rem;
+  }
+}
+
+/* Display and alignment */
+.flex {
+  display: flex;
+}
+
+.flex-jc-sb {
+  justify-content: space-between;
+}
+
+.flex-jc-c {
+  justify-content: center;
+}
+
+.flex-ai-c {
+  align-items: center;
+}
+
+/* Visibility */
+@media (width >= 50em) {
+  .hide-for-desktop {
+    display: none;
+  }
+}
+
+@media (width < 50em) {
+  .hide-for-mobile {
+    display: none;
+  }
+}
+
+/* Button & its hover effect */
+.btn {
+  padding: 0.875rem 2.1875rem;
+  background-image: linear-gradient(
+    237deg,
+    var(--bright-cyan) 30.09%,
+    var(--limegreen) 98.02%
+  );
+  color: var(--white);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+  border: none;
+  border-radius: 3.125rem;
+  outline: none;
+  cursor: pointer;
+
+  position: relative;
+}
+
+.btn::before {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.35);
+
+  position: absolute;
+  inset: 0;
+  border-radius: 3.125rem;
+
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
+
+/* Fade in and out animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
